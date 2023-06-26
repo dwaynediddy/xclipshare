@@ -44,8 +44,9 @@ const Clip = () => {
                 <img src={heartGif} alt='gif' />
                 <img src={thumbDownGif} alt='gif' />
             </div>
-        </div>
-        <div className='commentSection'>
+                <div className='commentSection'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus. Eget felis eget nunc lobortis mattis aliquam. Convallis aenean et tortor at risus viverra adipiscing at in. 
+                </div>
         </div>
     </div>
   )
