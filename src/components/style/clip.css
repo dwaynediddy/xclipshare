@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 10px 0 10px 0; 
+}
+
+.clip {
+    height: 550px;
+    width: 550px;
+    border: 1px solid red;
+    border-radius: 12px;
+}
+
+.commentSecionHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.commentButton {
+  border: none;
+  background: none;
+}
+
+.buttonGif {
+  border: none;
+  background: none;
+}
+
+.commentInput {
+  width: 300px; /* Adjust the width to your desired size */
+  height: 40px; /* Adjust the height to your desired size */
+}
+
