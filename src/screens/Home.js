@@ -2,10 +2,12 @@ import React from 'react'
 import './style/home.css'
 // import Clip from '../components/Clip'
 import PostsList from '../components/PostsList'
+import AddPostForm from '../components/AddPostForm'
 
 const Home = () => {
   return (
     <div className='container'>
+        <AddPostForm />
         <PostsList />
     </div>
   )
