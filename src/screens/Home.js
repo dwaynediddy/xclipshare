@@ -1,16 +1,14 @@
 import React from 'react'
 import './style/home.css'
-import Clip from '../components/Clip'
+// import Clip from '../components/Clip'
+import PostsList from '../components/PostsList'
+import AddPostForm from '../components/posts/AddPostForm'
 
 const Home = () => {
   return (
     <div className='container'>
-        <h2>clips</h2>
-        <div className='scroller'>
-            <div className='posts'>
-                <Clip />
-            </div>
-        </div>
+        <AddPostForm />
+        <PostsList />
     </div>
   )
 }
