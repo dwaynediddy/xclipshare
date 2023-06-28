@@ -1,55 +1,23 @@
-import { useState } from 'react'
-import './style/clip.css'
+// import { useState } from 'react'
+// import './style/clip.css'
 
-import videoGif from '../gif/film-wired-outline.gif'
-import commentGif from '../gif/comment.gif'
-import heartGif from '../gif/heart.gif'
-import thumbDownGif from '../gif/thumbDown.gif'
+// import AddPostForm from '../components/posts/AddPostForm'
 
-const Clip = () => {
-    const [ showInput, setShowInput ] = useState(false)
-    const [inputValue, setInputValue] = useState('')
+// import videoGif from '../gif/film-wired-outline.gif'
+// import heartGif from '../gif/heart.gif'
+// import thumbDownGif from '../gif/thumbDown.gif'
 
-    const handleCommentButton = () => {
-        setShowInput(!showInput)
-    }
+// const Clip = () => {
+//   return (
+//     <div className='container'>
+//         <div className='clip'>
+//             <img src={videoGif} alt='gif' />
+//             <img src={heartGif} alt='gif' />
+//             <img src={thumbDownGif} alt='gif' />
+//             <AddPostForm />
+//         </div>
+//         </div>
+//   )
+// }
 
-    const handleInputChange = e => {
-        setInputValue(e.target.value)
-    }
-
-  return (
-    <div className='container'>
-        <div className='clip'>
-            <img src={videoGif} alt='gif' />
-            <div className='commentSecionHead'>
-                <button
-                    className='commentButton' 
-                    onClick={handleCommentButton}>
-                        <img
-                            className='buttonGif' 
-                            src={commentGif} alt='gif' 
-                        />
-                    </button>
-                {showInput && (
-                    <div className='inputText'>
-                        <input 
-                        className='commentInput'
-                            type="text" 
-                            value={inputValue} 
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                )}
-                <img src={heartGif} alt='gif' />
-                <img src={thumbDownGif} alt='gif' />
-            </div>
-                <div className='commentSection'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus. Eget felis eget nunc lobortis mattis aliquam. Convallis aenean et tortor at risus viverra adipiscing at in. 
-                </div>
-        </div>
-    </div>
-  )
-}
-
-export default Clip
+// export default Clip

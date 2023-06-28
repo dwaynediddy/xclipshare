@@ -6,14 +6,22 @@ const initialState = [
         id: '1', 
         title: "getting this going", 
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
-        date: sub(new Date(), {minutes: 10}).toISOString()
+        date: sub(new Date(), {minutes: 10}).toISOString(),
+        reactions: {
+            heart: 0,
+            thumbDown: 0
+        }
     },
-        
+    
     {
         id: '2', 
         title: "second", 
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
-        date: sub(new Date(), {minutes: 24}).toISOString()
+        date: sub(new Date(), {minutes: 24}).toISOString(),
+        reactions: {
+            heart: 0,
+            thumbDown: 0
+        }
     }
 ]
 
@@ -32,8 +40,19 @@ const postsSlice = createSlice({
                         title,
                         content,
                         date: new Date().toISOString(),
-                        userId
+                        userId,
+                        reactions: {
+                            heart: 0,
+                            thumbDown: 0
+                        }
                     }
+                }
+            },
+            reactionAdded(state, action) {
+                const { postId, reaction } = action.payload
+                const existingPost = state.find(post => post.id === postId)
+                if (existingPost) {
+                    existingPost.reactions[reaction]++
                 }
             }
         }
