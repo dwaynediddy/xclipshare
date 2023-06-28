@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux";
 import { reactionAdded } from "./postsSlice";
+import '../style/reactionBtn.css'
 
 import heartGif from '../gif/heart.gif'
 import thumbDownGif from '../gif/thumbDown.gif'
 
 const reactionEmoji = {
     heart: <img src={heartGif} alt='heart' />,
-    thumbsDown: <img src={thumbDownGif} alt='thumbsDown' />
-
+    thumbDown: <img src={thumbDownGif} alt='thumbsDown' />
 }
 
 const ReactionButtons = ({ post }) => {
@@ -21,7 +21,7 @@ const ReactionButtons = ({ post }) => {
             <button
                 key={name}
                 type='button'
-                className='reactionbutton'
+                className='reactionButton'
                 onClicke={onReactionClick}
             >
                 {emoji} {post.reactions[name]}
