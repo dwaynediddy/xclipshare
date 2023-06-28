@@ -7,27 +7,27 @@ import { selectAllUsers } from '../users/usersSlice'
 const AddPostForm = () => {
     const [ title, setTitle ] = useState('')
     const [ content, setContent ] = useState('')
-    const [ usersId, setUsersId ] = useState('')
+    const [ userId, setUserId ] = useState('')
 
     const users = useSelector(selectAllUsers)
 
     const onTitleChange = e => setTitle(e.target.value)
     const onContentChange = e => setContent(e.target.value)
-    const onAuthorChange = e => setUsersId(e.target.value)
+    const onAuthorChange = e => setUserId(e.target.value)
 
     const dispatch = useDispatch()
 
     const onSubmit = () => {
         if(title && content) {
             dispatch(
-                postAdded(title, content, usersId)
+                postAdded(title, content, userId)
             )
                 setTitle('')
                 setContent('')
         }
     }
 
-    const canSave = Boolean(title) && Boolean(content) && Boolean(usersId)
+    const canSave = Boolean(title) && Boolean(content) && Boolean(userId)
 
     const usersOptions = users.map(user => (
         <option key={user.id} value={user.id}>
@@ -50,7 +50,7 @@ const AddPostForm = () => {
             <label htmlFor='postAuthor'>Author:</label>
             <select 
                 id='postAuthor'
-                value={usersId}
+                value={userId}
                 onChange={onAuthorChange}
             >
                 <option value=''></option>
