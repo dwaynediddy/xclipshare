@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { postAdded } from './postsSlice'
 import { selectAllUsers } from '../users/usersSlice'
 
+import '../style/form.css'
+
 const AddPostForm = () => {
     const [ title, setTitle ] = useState('')
     const [ content, setContent ] = useState('')
@@ -38,7 +40,7 @@ const AddPostForm = () => {
   return (
     <section>
         <h2>Add Post</h2>
-        <form>
+        <form className="form-container">
             <label htmlFor='postTitle'>Title:</label>
             <input
                 type='text'
