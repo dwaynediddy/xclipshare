@@ -38,7 +38,7 @@ const AddPostForm = () => {
     ))
 
   return (
-    <section>
+    <section className='postFormSection'>
         <h2>Add Post</h2>
         <form className="form-container">
             <label htmlFor='postTitle'>Title:</label>
@@ -66,10 +66,11 @@ const AddPostForm = () => {
                 value={content}
                 onChange={onContentChange}
             />
-            <button 
-            onClick={onSubmit}
-            type='button'
-            disabled={!canSave}
+            <button
+                className='submitButton'
+                onClick={onSubmit}
+                type='button'
+                disabled={!canSave}
             >Post</button>
         </form>
     </section>

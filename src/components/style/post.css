@@ -1,0 +1,51 @@
+.postFormSection {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .articleContainer {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* border: 1px solid #e0e0e0; a slightly lighter grey border */
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .postCredit {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .postCredit > *:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .ReactionButtons button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .ReactionButtons img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  

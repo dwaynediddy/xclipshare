@@ -1,7 +1,7 @@
 import React from 'react'
 import './style/home.css'
 import Clip from '../components/Clip'
-import PostsList from '../components/PostsList'
+import PostsList from '../components/posts/PostsList'
 import AddPostForm from '../components/posts/AddPostForm'
 
 const Home = () => {
